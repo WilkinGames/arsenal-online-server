@@ -6,6 +6,7 @@
 const chalk = require("chalk");
 const log = console.log;
 const RateLimit = require('express-rate-limit');
+const escape = require('escape-html');
 
 // set up rate limiter: maximum of 100 requests per 15 minutes
 const limiter = RateLimit({
@@ -469,7 +470,7 @@ app.post("/xsolla", bodyParser.json(), limiter, async (req, res) =>
     str += XSOLLA_API_KEY;
     var hash = crypto.createHash("sha1").update(str).digest("hex");
     log("Hash:", hash);
-    res.status(status).send(str);
+    res.status(status).send(escape(str));
 });
 
 //API
