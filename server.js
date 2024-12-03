@@ -357,8 +357,8 @@ app.get("/reset", async (request, response) =>
             const db = client.db("arsenal");
             let collection = db.collection("accounts");   
             let query = {
-                resetToken: token
-            };	     
+                resetToken: { $eq: token }
+            };
             let res = await collection.findOne(query);
             if (res)
             {
