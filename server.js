@@ -455,7 +455,7 @@ app.get("/settings", (request, response) =>
 app.post("/xsolla", bodyParser.json(), limiter, async (req, res) => 
 {
     log(chalk.bgCyan("Xsolla"));
-    log(req.body, req.headers.authorization);
+    log("Request body: %s", JSON.stringify(req.body), req.headers.authorization);
     var status = 204;
     switch (req.body.notification_type)
     {
