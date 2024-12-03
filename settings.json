@@ -1,0 +1,7 @@
+{
+	"port": 9101,
+	"admins": ["xwilkinx"],
+	"moderators": ["thrombo", "UPBoss", "BLT", "Tactical Plague Doctor"],
+	"bUseHathora": false,
+	"multiplayerURL": "https://arsenal-mp-us.wilkingames.net/"
+}

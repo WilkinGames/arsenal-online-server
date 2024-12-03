@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Arsenal Online - Reset Password</title>
+    <link rel="shortcut icon" href="https://arsenalonline.net/play/latest/favicon.ico" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {            
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            document.getElementById("reset").hidden = false;
+            document.getElementById("success").hidden = true;  
+            var token = urlParams.get("token");
+            var pass;
+            $("#submit").click(function()
+            {
+                pass=$("#password").val();
+                $.ajax({
+                    url: "/reset",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        password: pass,
+                        token: token
+                    }),
+                    success: (res) => {
+                        if (res == "OK")
+                        {
+                            document.getElementById("reset").hidden = true;
+                            document.getElementById("success").hidden = false; 
+                        } 
+                    }
+                });
+            });
+        });
+      </script>
+</head>
+<body>
+    <div id="reset" class="container">
+        <h3>Enter a new password for your Arsenal Online account.</h3>
+        <input id="password" type="password" name="password" placeholder="Password" required>
+        <input id="submit" type="submit" value="Confirm">
+    </div>
+    <div id="success" class="container" hidden="true">
+        <h3>Your password has been changed successfully.</h3>
+    </div>
+</body>
+</html>

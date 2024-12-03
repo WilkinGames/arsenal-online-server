@@ -1,0 +1,28 @@
+{
+  "name": "arsenal-online-account",
+  "version": "1.0.0",
+  "description": "Arsenal Online account server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wilkin Games",
+  "license": "ISC",
+  "dependencies": {
+    "@hathora/hathora-cloud-sdk": "^0.0.4",
+    "axios": "^1.5.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "chalk": "^4.1.2",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^6.0.0",
+    "node-fetch": "^2.6.7",
+    "node-int64": "^0.4.0",
+    "nodemailer": "^6.9.6",
+    "rate-limiter-flexible": "^3.0.4",
+    "smile2emoji": "^3.8.5",
+    "socket.io": "^4.7.2",
+    "socket.io-json-parser": "^3.0.0"
+  }
+}

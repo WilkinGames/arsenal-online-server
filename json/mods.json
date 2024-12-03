@@ -1,0 +1,376 @@
+[
+  {
+    "id": "optic0000",
+    "name": "STR_NONE",
+    "desc": "STR_NONE_DESC",
+    "type": "optic",
+    "cost": 0
+  },
+  {
+    "id": "optic0001",
+    "name": "STR_OPTIC_REFLEX",
+    "desc": "STR_OPTIC_REFLEX_DESC",
+    "type": "optic",
+    "cost": 500,
+    "unlockHeadshots": 25,
+    "modifiers": {
+      "accuracy": 0.8
+    }
+  },
+  {
+    "id": "optic0002",
+    "name": "STR_OPTIC_RED_DOT",
+    "desc": "STR_OPTIC_RED_DOT_DESC",
+    "type": "optic",
+    "cost": 1000,
+    "unlockHeadshots": 50,
+    "modifiers": {
+      "accuracy": 0.8
+    }
+  },
+  {
+    "id": "optic0004",
+    "name": "STR_OPTIC_EOTECH",
+    "desc": "STR_OPTIC_EOTECH_DESC",
+    "type": "optic",
+    "cost": 2000,
+    "unlockHeadshots": 100,
+    "modifiers": {
+      "accuracy": 0.8
+    }
+  },
+  {
+    "id": "optic0006",
+    "name": "STR_OPTIC_AIMPOINT",
+    "desc": "STR_OPTIC_AIMPOINT_DESC",
+    "type": "optic",
+    "cost": 3000,
+    "unlockHeadshots": 200,
+    "modifiers": {
+      "accuracy": 0.5
+    }
+  },
+  {
+    "id": "optic0005",
+    "name": "STR_OPTIC_ACOG",
+    "desc": "STR_OPTIC_ACOG_DESC",
+    "type": "optic",
+    "cost": 4000,
+    "unlockHeadshots": 300,
+    "modifiers": {
+      "accuracy": 0.65
+    }
+  },
+  {
+    "id": "optic0007",
+    "name": "STR_OPTIC_SNIPER_SCOPE",
+    "desc": "STR_OPTIC_SNIPER_SCOPE_DESC",
+    "type": "optic",
+    "cost": 5000,
+    "unlockHeadshots": 500,
+    "modifiers": {
+      "accuracy": 0.1
+    }
+  },
+  {
+    "id": "mag0000",
+    "name": "STR_NONE",
+    "desc": "STR_NONE_DESC",
+    "type": "mag",
+    "cost": 0
+  },
+  {
+    "id": "mag0001",
+    "name": "STR_MAG_FMJ",
+    "desc": "STR_MAG_FMJ_DESC",
+    "type": "mag",
+    "cost": 2000,
+    "unlockKills": 100,
+    "modifiers": {
+      "damage": 1.2
+    }
+  },
+  {
+    "id": "mag0002",
+    "name": "STR_MAG_EXTENDED",
+    "desc": "STR_MAG_EXTENDED_DESC",
+    "type": "mag",
+    "cost": 3000,
+    "unlockKills": 200
+  },
+  {
+    "id": "mag0005",
+    "name": "STR_MAG_PIERCING",
+    "desc": "STR_MAG_PIERCING_DESC",
+    "type": "mag",
+    "cost": 4000,
+    "unlockKills": 250,
+    "modifiers": {
+      "penetration": 2
+    }
+  },
+  {
+    "id": "mag0003",
+    "name": "STR_MAG_HOLLOW_POINT",
+    "desc": "STR_MAG_HOLLOW_POINT_DESC",
+    "type": "mag",
+    "cost": 5000,
+    "unlockKills": 500,
+    "modifiers": {
+      "headshotDamage": 1.5
+    }
+  },
+  {
+    "id": "mag0004",
+    "name": "STR_MAG_EXPLOSIVE",
+    "desc": "STR_MAG_EXPLOSIVE_DESC",
+    "type": "mag",
+    "cost": 6000,
+    "unlockKills": 1000,
+    "modifiers": {
+      "penetration": 0.8,
+      "damage": 1.5
+    }
+  },
+  {
+    "id": "mag0007",
+    "name": "STR_MAG_FRAGMENTATION",
+    "desc": "STR_MAG_FRAGMENTATION_DESC",
+    "type": "mag",
+    "cost": 3000,
+    "unlockKills": 250,
+    "bLauncherOnly": true
+  },
+  {
+    "id": "mag0006",
+    "name": "STR_MAG_HIGH_EXPLOSIVE",
+    "desc": "STR_MAG_HIGH_EXPLOSIVE_DESC",
+    "type": "mag",
+    "cost": 6000,
+    "unlockKills": 500,
+    "bLauncherOnly": true
+  },
+  {
+    "id": "base_none",
+    "name": "STR_NONE",
+    "desc": "STR_NONE_DESC",
+    "type": "base",
+    "cost": 0
+  },
+  {
+    "id": "base_accuracy",
+    "name": "STR_BASE_MARKSMAN",
+    "desc": "STR_BASE_MARKSMAN_DESC",
+    "type": "base",
+    "cost": 1000,
+    "unlockHeadshots": 50,
+    "modifiers": {
+      "accuracy": 0.5
+    }
+  },
+  {
+    "id": "base_speed_reload",
+    "name": "STR_BASE_SPEED_LOADER",
+    "desc": "STR_BASE_SPEED_LOADER_DESC",
+    "type": "base",
+    "cost": 3000,
+    "unlockHeadshots": 100
+  },
+  {
+    "id": "base_full_auto",
+    "name": "STR_BASE_FULL_AUTO",
+    "desc": "STR_BASE_FULL_AUTO_DESC",
+    "type": "base",
+    "cost": 3000,
+    "unlockHeadshots": 100,
+    "modifiers": {
+      "accuracy": 1.2,
+      "recoil": 1.2
+    }
+  },
+  {
+    "id": "base_burst_fire",
+    "name": "STR_BASE_BURST",
+    "desc": "STR_BASE_BURST_DESC",
+    "type": "base",
+    "cost": 3000,
+    "unlockHeadshots": 100,
+    "modifiers": {
+      "recoil": 0.8,
+      "accuracy": 0.5,
+      "fireRate": 0.6
+    }
+  },
+  {
+    "id": "base_rapid_fire",
+    "name": "STR_BASE_RAPID_FIRE",
+    "desc": "STR_BASE_RAPID_FIRE_DESC",
+    "type": "base",
+    "cost": 4000,
+    "unlockHeadshots": 200,
+    "modifiers": {
+      "fireRate": 0.75
+    }
+  },
+  {
+    "id": "base_buckshot",
+    "name": "STR_BASE_BUCKSHOT",
+    "desc": "STR_BASE_BUCKSHOT_DESC",
+    "type": "base",
+    "cost": 5000,
+    "unlockHeadshots": 250,
+    "modifiers": {
+      "accuracy": 2
+    }
+  },
+  {
+    "id": "base_recoil",
+    "name": "STR_BASE_SHOCK_DAMPER",
+    "desc": "STR_BASE_SHOCK_DAMPER_DESC",
+    "type": "base",
+    "cost": 6000,
+    "unlockHeadshots": 300,
+    "modifiers": {
+      "recoil": 0.8
+    }
+  },
+  {
+    "id": "base_slug",
+    "name": "STR_BASE_SLUG",
+    "desc": "STR_BASE_SLUG_DESC",
+    "type": "base",
+    "cost": 7000,
+    "unlockHeadshots": 400,
+    "modifiers": {
+      "recoil": 1.2,
+      "damage": 4,
+      "accuracy": 0.25
+    }
+  },
+  {
+    "id": "base_greed",
+    "name": "STR_BASE_GREED",
+    "desc": "STR_BASE_GREED_DESC",
+    "type": "base",
+    "cost": 8000,
+    "unlockHeadshots": 500
+  },
+  {
+    "id": "barrel0000",
+    "name": "STR_NONE",
+    "desc": "STR_NONE_DESC",
+    "type": "barrel",
+    "cost": 0
+  },
+  {
+    "id": "barrel0001",
+    "name": "STR_BARREL_LASER",
+    "desc": "STR_BARREL_LASER_DESC",
+    "type": "barrel",
+    "cost": 1000,
+    "unlockKills": 50
+  },
+  {
+    "id": "barrel0006",
+    "name": "STR_BARREL_GRIP",
+    "desc": "STR_BARREL_GRIP_DESC",
+    "type": "barrel",
+    "cost": 2000,
+    "unlockKills": 100,
+    "modifiers": {
+      "recoil": 0.5
+    }
+  },
+  {
+    "id": "barrel0011",
+    "name": "STR_BARREL_BIPOD",
+    "desc": "STR_BARREL_BIPOD_DESC",
+    "type": "barrel",
+    "cost": 3000,
+    "unlockKills": 150,
+    "modifiers": {
+      "accuracy": 0.6,
+      "recoil": 0.6
+    }
+  },
+  {
+    "id": "barrel0007",
+    "name": "STR_BARREL_MASTERKEY",
+    "desc": "STR_BARREL_MASTERKEY_DESC",
+    "type": "barrel",
+    "cost": 6000,
+    "unlockKills": 300
+  },
+  {
+    "id": "barrel0002",
+    "name": "STR_BARREL_GRENADE_LAUNCHER",
+    "desc": "STR_BARREL_GRENADE_LAUNCHER_DESC",
+    "type": "barrel",
+    "cost": 8000,
+    "unlockKills": 500
+  },
+  {
+    "id": "muzzle0000",
+    "name": "STR_NONE",
+    "desc": "STR_NONE_DESC",
+    "type": "muzzle",
+    "cost": 0
+  },
+  {
+    "id": "muzzle0003",
+    "name": "STR_MUZZLE_SUPPRESSOR",
+    "desc": "STR_MUZZLE_SUPPRESSOR_DESC",
+    "type": "muzzle",
+    "cost": 1000,
+    "unlockKills": 100,
+    "modifiers": {
+      "recoil": 0.35,
+      "penetration": 0.5
+    }
+  },
+  {
+    "id": "muzzle0002",
+    "name": "STR_MUZZLE_COMPENSATOR",
+    "desc": "STR_MUZZLE_COMPENSATOR_DESC",
+    "type": "muzzle",
+    "cost": 2000,
+    "unlockKills": 200,
+    "modifiers": {
+      "recoil": 0.8
+    }
+  },
+  {
+    "id": "muzzle0005",
+    "name": "STR_MUZZLE_STABILIZER",
+    "desc": "STR_MUZZLE_STABILIZER_DESC",
+    "type": "muzzle",
+    "cost": 3000,
+    "unlockKills": 300,
+    "modifiers": {
+      "accuracy": 0.75
+    }
+  },
+  {
+    "id": "muzzle0004",
+    "name": "STR_MUZZLE_ACCELERATOR",
+    "desc": "STR_MUZZLE_ACCELERATOR_DESC",
+    "type": "muzzle",
+    "cost": 4000,
+    "unlockKills": 400,
+    "modifiers": {
+      "penetration": 2
+    }
+  },
+  {
+    "id": "muzzle0001",
+    "name": "STR_MUZZLE_BOOSTER",
+    "desc": "STR_MUZZLE_BOOSTER_DESC",
+    "type": "muzzle",
+    "cost": 6000,
+    "unlockKills": 500,
+    "modifiers": {
+      "damage": 1.1,
+      "recoil": 1.2
+    }
+  }
+]

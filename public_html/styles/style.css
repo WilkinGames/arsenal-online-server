@@ -1,0 +1,124 @@
+body {
+    background-image: url("https://xwilkinx.com/play/dinogen/latest/assets/images/bg/bg_splash_4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-shadow: 1px 1px #00000033;
+    color: white;
+    font-family: "Chakra Petch", Arial, sans-serif;
+    text-align: center;
+}	
+
+select {
+    font-family: "Chakra Petch", Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #FFFFFF33;
+}
+
+h3 {
+    padding: 5px;
+}
+
+a {
+    color: #D85540;
+    opacity: 0.75;
+}
+
+a:hover {
+    color: #D85540;
+    opacity: 1;
+}
+
+.buyContainer {
+    padding: 0px;
+    margin: 10px;
+    background-color: #00000033;
+    border-radius: 5px;
+}
+
+.container {
+    font-size: 16px;
+    font-family: "Chakra Petch", Arial, sans-serif;
+    color: #EEEEEE;
+    text-align: center;
+    background: #00000080;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center; 
+}
+
+form {
+    width: 600px;
+    margin: 0 auto;
+    font-family: "Chakra Petch", Arial, sans-serif;
+}
+
+input[type="password"],
+input[type="text"] {
+    font-size: 24px;
+    font-family: "Chakra Petch", Arial, sans-serif;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    background-color: #141414;
+    color: #EEEEEE;
+    text-align: center;
+}
+input[type="submit"] {
+    font-size: 24px;
+    font-family: "Chakra Petch", Arial, sans-serif;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 15px;
+    background-color: #5FFF7F33;
+    border-radius: 5px;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #ffffff80;
+    transition: all 0.2s ease 0s;
+}
+input[type="submit"]:hover {
+    color: #FFFFFF !important;
+    background-color: #5FFF7F80;
+    transition: all 0.2s ease 0s;
+}
+
+button {
+    font-family: "Chakra Petch", Arial, sans-serif;
+    width: 200px;
+    border: none;
+    background: #00000011;
+    color: #ffffff33 !important;
+    font-size: 24px;
+    font-weight: 100;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.1s ease 0s;
+}
+.button:hover {
+    color: #D85540 !important;
+    background-color: #00000080;
+    transition: all 0.1s ease 0s;
+}
+.button:focus {
+    outline: 0;
+}
+.button:disabled {
+    background: #00000033;
+    color: #D85540 !important;
+}
