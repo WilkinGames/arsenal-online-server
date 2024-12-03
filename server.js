@@ -930,7 +930,7 @@ io.on("connection", (socket) =>
 
     socket.on("register", (_username, _password, _email, _data) =>
     {
-        log(logSocket(socket), "Wants to register:", _username, _password, _email);
+        log(logSocket(socket), "Wants to register:", _username, "[REDACTED]", _email);
         requestRegister(socket, _username, _password, _email, _data);
     });
 
