@@ -24,6 +24,7 @@
     "smile2emoji": "^3.8.5",
     "socket.io": "^4.7.2",
     "socket.io-json-parser": "^3.0.0",
-    "express-rate-limit": "^7.4.1"
+    "express-rate-limit": "^7.4.1",
+    "escape-html": "^1.0.3"
   }
 }
