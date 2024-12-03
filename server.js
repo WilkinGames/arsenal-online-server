@@ -405,7 +405,7 @@ app.post("/reset", bodyParser.json(), limiter, async (request, response) =>
             const db = client.db("arsenal");
             let collection = db.collection("accounts");   
             let query = {
-                resetToken: token
+                resetToken: { $eq: token }
             };	     
             var salt = bcrypt.genSaltSync(saltRounds);
             var hash = bcrypt.hashSync(password, salt);
