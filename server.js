@@ -3311,7 +3311,7 @@ async function getPlayerData(_username, _callback)
         {
             const db = client.db("arsenal");
             let collection = db.collection("accounts");
-            let res = await collection.findOne({ username: _username});
+            let res = await collection.findOne({ username: { $eq: _username } });
             delete res.password;
             delete res.email;
             delete res._id;
