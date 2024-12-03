@@ -5,6 +5,13 @@
  */
 const chalk = require("chalk");
 const log = console.log;
+const RateLimit = require('express-rate-limit');
+
+// set up rate limiter: maximum of 100 requests per 15 minutes
+const limiter = RateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // max 100 requests per windowMs
+});
 const GameMode = {
     TIME_ATTACK: "time_attack",
     DEFENDER: "defender",
@@ -384,7 +391,7 @@ app.get("/reset", async (request, response) =>
     }
 });
 
-app.post("/reset", bodyParser.json(), async (request, response) => 
+app.post("/reset", bodyParser.json(), limiter, async (request, response) => 
 {
     log(request.body);
     var password = request.body.password;
@@ -444,7 +451,7 @@ app.get("/settings", (request, response) =>
 });
 
 //Xsolla webhooks
-app.post("/xsolla", bodyParser.json(), async (req, res) => 
+app.post("/xsolla", bodyParser.json(), limiter, async (req, res) => 
 {
     log(chalk.bgCyan("Xsolla"));
     log(req.body, req.headers.authorization);
