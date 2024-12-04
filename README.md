@@ -6,7 +6,7 @@ It handles user connectivity, challenges, email notifications, and more.
 
 ## API
 
-This servers also acts an API endpoint.
+This server also acts an API endpoint.
 
 For more info, see the Arsenal Online API: https://arsenalonline.net/api
 
