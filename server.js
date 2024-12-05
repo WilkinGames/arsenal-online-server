@@ -346,7 +346,7 @@ app.get("/", (request, response) =>
     response.send(str);
 });
 
-app.get("/reset", async (request, response) =>
+app.get("/reset", limiter, async (request, response) =>
 {
     var token = request.query.token;
     if (token)
