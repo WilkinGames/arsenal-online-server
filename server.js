@@ -3446,19 +3446,20 @@ async function createHathoraLobby(_socket, _data, _callback)
 
 function handleChatMessage(_socket, _message)
 {
-    var block = ["van", "dan", "reaper", "daddy", "babe", "baby", " gf", " bf", "love u", "love me"];
+    // Used to block certain words
+    // var block = [];
     
     log(chalk.cyan(_socket.id), "CHAT", _message);
-    /* can be used for guest chat blocking if needed
-    if (!_socket.data.username) {
+    // requires login for chat
+    if (!_socket.data.username) 
+    {
         sendChatMessageToSocket(_socket, {
             bServer: true,
             bDirect: true,
-            messageText: "Create an account to send chat messages."
+            messageText: "Create an Arsenal Online account to send chat messages."
         });
         return;
     }
-    */
     if (_socket.data.bMuted)
     {
         sendChatMessageToSocket(_socket, {
@@ -3468,11 +3469,13 @@ function handleChatMessage(_socket, _message)
         });
         return;
     }
+    /* Used to block certain words
     if (block.some(text => _message.toLowerCase().includes(text)) || block.some(text => _socket.data.name.toLowerCase().includes(text)))
     {
         _socket.data.bMuted = 1;
         return;
     }
+    */
     if (!_message || !_message.length || !_message.trim().length || !_message.replace(/\s/g, '').length)
     {
         return;
