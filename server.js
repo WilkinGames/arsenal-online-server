@@ -3509,13 +3509,15 @@ function handleChatMessage(_socket, _message)
             case "/mute":
                 if (bAdmin || bModerator)
                 {
-                    mutePlayer(args[1]);
+                    var target = message.replace("/mute ", "");
+                    mutePlayer(target);
                 }
                 break;
             case "/ban":
                 if (bAdmin || bModerator)
                 {
-                    banPlayer(args[1]);
+                    var target = message.replace("/ban ", "");
+                    banPlayer(target);
                 }
                 break;  
         }
