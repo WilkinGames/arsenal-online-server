@@ -1739,6 +1739,7 @@ function getEmailTemplate(_data)
 //MongoDB
 const { MongoClient } = require("mongodb");
 const { connect } = require("http2");
+const { json } = require("express");
 const uri = "mongodb+srv://" + auth.mongodb?.user + ":" + auth.mongodb?.pass + "@cluster0.ecgzr.mongodb.net/?retryWrites=true&w=majority";
 
 async function requestLogin(_socket, _username, _password, _type)
@@ -3445,7 +3446,20 @@ async function createHathoraLobby(_socket, _data, _callback)
 
 function handleChatMessage(_socket, _message)
 {
+    // Used to block certain words
+    // var block = [];
+    
     log(chalk.cyan(_socket.id), "CHAT", _message);
+    // requires login for chat
+    if (!_socket.data.username) 
+    {
+        sendChatMessageToSocket(_socket, {
+            bServer: true,
+            bDirect: true,
+            messageText: "Create an Arsenal Online account to send chat messages."
+        });
+        return;
+    }
     if (_socket.data.bMuted)
     {
         sendChatMessageToSocket(_socket, {
@@ -3455,6 +3469,13 @@ function handleChatMessage(_socket, _message)
         });
         return;
     }
+    /* Used to block certain words
+    if (block.some(text => _message.toLowerCase().includes(text)) || block.some(text => _socket.data.name.toLowerCase().includes(text)))
+    {
+        _socket.data.bMuted = 1;
+        return;
+    }
+    */
     if (!_message || !_message.length || !_message.trim().length || !_message.replace(/\s/g, '').length)
     {
         return;
@@ -3488,13 +3509,15 @@ function handleChatMessage(_socket, _message)
             case "/mute":
                 if (bAdmin || bModerator)
                 {
-                    mutePlayer(args[1]);
+                    var target = message.replace("/mute ", "");
+                    mutePlayer(target);
                 }
                 break;
             case "/ban":
                 if (bAdmin || bModerator)
                 {
-                    banPlayer(args[1]);
+                    var target = message.replace("/ban ", "");
+                    banPlayer(target);
                 }
                 break;  
         }
